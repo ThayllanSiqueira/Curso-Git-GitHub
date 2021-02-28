@@ -23,6 +23,9 @@
 # Deletar branch do historia
     * git branch -D feature/cart
 
+# Deletando um branch remoto
+    * git push origin :teste
+
 # Alterar para a branch criada
     * git checkout feature/cart
 
@@ -44,6 +47,7 @@
 # Verificar commits realizados / Pontos na historia
     * git log
     * git log --oneline -> Verificar commits com uma linha
+    * git log --oneline --decorate --all --graph -> verificar o grafo da arvore de branchs
 
 # Mergear / Unir as branch - Sempre realizar o comando da branch destino
     * git merge feature/cart
@@ -83,8 +87,8 @@
     * git reset --mixed 'idcommit' -> Volta para o ponto, mantém os arquivos futuros sem adinálos
     * git reset --hard 'idcommit' -> Reseta tudo e perde todos os arquivos futuros
 
-# Gravar credenciais do repositório remoto para não ficar digitando toda historia
-    * git credential.helper store
+# Revertendo sem perder o código
+    * git revert --no-edit 'idcommit-error'
 
 
 
