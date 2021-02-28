@@ -62,7 +62,12 @@
 # Adicionar file e comitar ao mesmo tempo
     * git commit -am "change file"
 
-# Puchar atualizações do repositório remoto para o repositório local.
+# Puxar atualizações do repositório remoto para o repositório local.
     * git pull
+
+# Voltar um somente um arquivo para a linha do tempo antiga
+    * git checkout 'idcommit' --file.recuperar
+
+
 
 	
