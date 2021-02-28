@@ -1,2 +1,68 @@
-#Inicializar repositório
+# Inicializar repositório
+    * git init
+
+# Adicionar files ao repositório
+    * git add index.html
+
+# Adicionar todos os files não adicionado ao repositório
+    * git add .
+    * git add -A
+
+# Comitar file ao repositório / Criar um ponto na historia
+    * git commit -m "primeiro commit"
+
+# Verificar commits realizados / Pontos na historia
+    * git log
+
+# Verificar se há mudanças no repositório local
+    * git status
+
+# Verificar alterações de commit específico / pontos na historia
+    * git show 'idcommit'
+
+# Verificar alterações do ultimo commit / pontos na historia
+    * git show
+
+# Criar branch / Ramificação / Universo paralelo
+    * git branch feature/cart
+
+# Alterar para a branch criada
+    * git checkout feature/cart
+
+# Voltando para branch Master
+    * git checkout master
+
+# Mostrar todas as branch do projeto
+    * git branch
+
+# Mergear / Unir as branch - Sempre realizar o comando da branch destino
+    * git merge feature/cart
+
+# Deletar branch do historia
+    * git branch -D feature/cart
+
+# Criar uma branch já alterando o repositório local para apontar para ela 
+    * git checkout -b teste
+
+# Emparelhar repositório local para repositório remoto "Servidor / GITHUB"
+    * git remote add origin 'url'
+
+# Verificar repositórios remotos
+    * git remote -v 
+
+# Enviar files do repositório local para o repositório remoto na branch master
+    * git push "-U origin master - Somente para criar a master na origin" 
+
+# Gravar credenciais do repositório remoto para não ficar digitando toda historia
+    * git credential.helper store
+
+# Pegar repositórios já iniciados na nuvem remota
+    * git clone 'url'
+
+# Adicionar file e comitar ao mesmo tempo
+    * git commit -am "change file"
+
+# Puchar atualizações do repositório remoto para o repositório local.
+    * git pull
+
 	
