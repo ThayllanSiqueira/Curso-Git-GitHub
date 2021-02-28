@@ -11,20 +11,17 @@
 # Comitar file ao repositório / Criar um ponto na historia
     * git commit -m "primeiro commit"
 
-# Verificar commits realizados / Pontos na historia
-    * git log
+# Adicionar file e comitar ao mesmo tempo
+    * git commit -am "change file"
 
-# Verificar se há mudanças no repositório local
-    * git status
-
-# Verificar alterações de commit específico / pontos na historia
-    * git show 'idcommit'
-
-# Verificar alterações do ultimo commit / pontos na historia
-    * git show
+# Mostrar todas as branch do projeto
+    * git branch
 
 # Criar branch / Ramificação / Universo paralelo
     * git branch feature/cart
+
+# Deletar branch do historia
+    * git branch -D feature/cart
 
 # Alterar para a branch criada
     * git checkout feature/cart
@@ -32,17 +29,39 @@
 # Voltando para branch Master
     * git checkout master
 
-# Mostrar todas as branch do projeto
-    * git branch
+# Criar uma branch já alterando o repositório local para apontar para ela 
+    * git checkout -b teste
+
+# Voltar um somente um arquivo para a linha do tempo antiga
+    * git checkout 'idcommit' --file.recuperar
+
+# Voltar um arquivo para ponto inicial do commit que estava
+    * git checkout HEAD -- 'filename'
+
+# Verificar se há mudanças no repositório local
+    * git status
+
+# Verificar commits realizados / Pontos na historia
+    * git log
+    * git log --oneline -> Verificar commits com uma linha
 
 # Mergear / Unir as branch - Sempre realizar o comando da branch destino
     * git merge feature/cart
 
-# Deletar branch do historia
-    * git branch -D feature/cart
+# Verificar alterações de commit específico / pontos na historia
+    * git show 'idcommit'
 
-# Criar uma branch já alterando o repositório local para apontar para ela 
-    * git checkout -b teste
+# Verificar alterações do ultimo commit / pontos na historia
+    * git show
+
+# Verificar o que foi modificado antes do commit
+    * git diff
+
+# Verificar quais arquivos foram modificados
+    * git diff --name-only
+
+# Verificar o que foi alterado em um arquivo específico
+    * git diff 'nomearquivo'
 
 # Emparelhar repositório local para repositório remoto "Servidor / GITHUB"
     * git remote add origin 'url'
@@ -53,20 +72,19 @@
 # Enviar files do repositório local para o repositório remoto na branch master
     * git push "-U origin master - Somente para criar a master na origin" 
 
-# Gravar credenciais do repositório remoto para não ficar digitando toda historia
-    * git credential.helper store
-
 # Pegar repositórios já iniciados na nuvem remota
     * git clone 'url'
-
-# Adicionar file e comitar ao mesmo tempo
-    * git commit -am "change file"
 
 # Puxar atualizações do repositório remoto para o repositório local.
     * git pull
 
-# Voltar um somente um arquivo para a linha do tempo antiga
-    * git checkout 'idcommit' --file.recuperar
+# Voltando para um commit específico do branch
+    * git reset --soft 'idcommit' -> Volta para o ponto, mantém os arquivos futuros sem comitálos
+    * git reset --mixed 'idcommit' -> Volta para o ponto, mantém os arquivos futuros sem adinálos
+    * git reset --hard 'idcommit' -> Reseta tudo e perde todos os arquivos futuros
+
+# Gravar credenciais do repositório remoto para não ficar digitando toda historia
+    * git credential.helper store
 
 
 
