@@ -78,6 +78,12 @@
 
 # Pegar repositórios já iniciados na nuvem remota
     * git clone 'url'
+    
+# Pegar branch específico do repositório remoto após ja ter feito o clone do master
+    * git checkout -b <nome-do-seu-branch-local> origin/<nome-do-branch-remoto>
+    
+# Clonar apenas o branch específico do repositório remoto
+    * git clone -b <nome-do-branch-remoto> 	'url-clone'
 
 # Puxar atualizações do repositório remoto para o repositório local.
     * git pull
