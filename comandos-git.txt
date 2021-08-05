@@ -1,101 +1,168 @@
-# Inicializar repositório
-    * git init
+# Entrar na pasta por linha de comando e depois
+git init
 
-# Adicionar files ao repositório
-    * git add index.html
+# Configure seus dados no git
+git config --global user.name "Luiz Otávio Miranda"
+git config --global user.email "luizomf@gmail.com"
 
-# Adicionar todos os files não adicionado ao repositório
-    * git add .
-    * git add -A
+# Faça o commit inicial
+git commit -am 'Initial'
 
-# Comitar file ao repositório / Criar um ponto na historia
-    * git commit -m "primeiro commit"
+# Adicionar os arquivos
+git add arquivo.ext
+# ou
+git add .
 
-# Adicionar file e comitar ao mesmo tempo
-    * git commit -am "change file"
+# Veja o status
+git status
 
-# Mostrar todas as branch do projeto
-    * git branch
+# Salvar alterações (commit das alterações)
+git commit -am 'Mensagem do que foi adicionado'
 
-# Criar branch / Ramificação / Universo paralelo
-    * git branch feature/cart
+# Ver alterações
+git log --all --decorate --oneline --graph
 
-# Deletar branch do historia
-    * git branch -D feature/cart
+# Acessar algum commit específico
+git checkout <identificador>
 
-# Deletando um branch remoto
-    * git push origin :teste
+# Criar um novo branch daquele commit
+git checkout -b <nome>
 
-# Alterar para a branch criada
-    * git checkout feature/cart
+# Ver branchs
+git branch
 
-# Voltando para branch Master
-    * git checkout master
+# Renomear branchs locais
+git branch -m <nome> <novo_nome>
 
-# Criar uma branch já alterando o repositório local para apontar para ela 
-    * git checkout -b teste
+# Voltar ao master
+git checkout master
 
-# Voltar um somente um arquivo para a linha do tempo antiga
-    * git checkout 'idcommit' --file.recuperar
+# Merge (juntar o master ao seu novo branch)
+git merge <nome>
 
-# Voltar um arquivo para ponto inicial do commit que estava
-    * git checkout HEAD -- 'filename'
+# Tags
+git tag v0.1.1
+# apagar
+git tag -d <nome>
 
-# Verificar se há mudanças no repositório local
-    * git status
+# Clone
+git clone url_do_repo
 
-# Verificar commits realizados / Pontos na historia
-    * git log
-    * git log --oneline -> Verificar commits com uma linha
-    * git log --oneline --decorate --all --graph -> verificar o grafo da arvore de branchs
+# Adicionando repositório remoto
+git remote add <nome> usuario@url_do_repo
 
-# Mergear / Unir as branch - Sempre realizar o comando da branch destino
-    * git merge feature/cart
+# Baixar alterações do repo remoto
+git pull <nome_do_repo> <branch>
 
-# Verificar alterações de commit específico / pontos na historia
-    * git show 'idcommit'
+# Enviar commits para o repo remoto
+git push <nome_do_repo> <branch>
 
-# Verificar alterações do ultimo commit / pontos na historia
-    * git show
+# Criando seu próprio repo
+git init --bare
 
-# Verificar o que foi modificado antes do commit
-    * git diff
+# Git ignore (ignore alguns arquivos) com o .gitignore
+https://www.gitignore.io/
 
-# Verificar quais arquivos foram modificados
-    * git diff --name-only
+# Revertendo alterações antes de commitar (arquivos precisar estar staged)
+git reset --hard
 
-# Verificar o que foi alterado em um arquivo específico
-    * git diff 'nomearquivo'
+# Removendo arquivos não adicionados
+git clean -f
 
-# Emparelhar repositório local para repositório remoto "Servidor / GITHUB"
-    * git remote add origin 'url'
+# Ver branchs remotos
+git remote show <nome_do_repo>
 
-# Verificar repositórios remotos
-    * git remote -v 
+# Apagar branchs remotos
+git push --delete <nome_do_repo> <nome_branch>
 
-# Enviar files do repositório local para o repositório remoto na branch master
-    * git push "-U origin master - Somente para criar a master na origin" 
+# Apagar remoto
+git remote -rm <nome_do_repo>
 
-# Pegar repositórios já iniciados na nuvem remota
-    * git clone 'url'
-    
-# Pegar branch específico do repositório remoto após ja ter feito o clone do master
-    * git checkout -b <nome-do-seu-branch-local> origin/<nome-do-branch-remoto>
-    
-# Clonar apenas o branch específico do repositório remoto
-    * git clone -b <nome-do-branch-remoto> 	'url-clone'
+# Desfazendo commits
+git reset --hard HEAD~1
 
-# Puxar atualizações do repositório remoto para o repositório local.
-    * git pull
+#############################################################################################################################
 
-# Voltando para um commit específico do branch
-    * git reset --soft 'idcommit' -> Volta para o ponto, mantém os arquivos futuros sem comitálos
-    * git reset --mixed 'idcommit' -> Volta para o ponto, mantém os arquivos futuros sem adinálos
-    * git reset --hard 'idcommit' -> Reseta tudo e perde todos os arquivos futuros
+# Entrar na pasta por linha de comando e depois
+git init
 
-# Revertendo sem perder o código
-    * git revert --no-edit 'idcommit-error'
+# Configure seus dados no git
+git config --global user.name "Luiz Otávio Miranda"
+git config --global user.email "luizomf@gmail.com"
 
+# Faça o commit inicial
+git commit -am 'Initial'
 
+# Adicionar os arquivos
+git add arquivo.ext
+# ou
+git add .
 
-	
+# Veja o status
+git status
+
+# Salvar alterações (commit das alterações)
+git commit -am 'Mensagem do que foi adicionado'
+
+# Ver alterações
+git log --all --decorate --oneline --graph
+
+# Acessar algum commit específico
+git checkout <identificador>
+
+# Criar um novo branch daquele commit
+git checkout -b <nome>
+
+# Ver branchs
+git branch
+
+# Renomear branchs locais
+git branch -m <nome> <novo_nome>
+
+# Voltar ao master
+git checkout master
+
+# Merge (juntar o master ao seu novo branch)
+git merge <nome>
+
+# Tags
+git tag v0.1.1
+# apagar
+git tag -d <nome>
+
+# Clone
+git clone url_do_repo
+
+# Adicionando repositório remoto
+git remote add <nome> usuario@url_do_repo
+
+# Baixar alterações do repo remoto
+git pull <nome_do_repo> <branch>
+
+# Enviar commits para o repo remoto
+git push <nome_do_repo> <branch>
+
+# Criando seu próprio repo
+git init --bare
+
+# Git ignore (ignore alguns arquivos) com o .gitignore
+https://www.gitignore.io/
+
+# Revertendo alterações antes de commitar (arquivos precisar estar staged)
+git reset --hard
+
+# Removendo arquivos não adicionados
+git clean -f
+
+# Ver branchs remotos
+git remote show <nome_do_repo>
+
+# Apagar branchs remotos
+git push --delete <nome_do_repo> <nome_branch>
+
+# Apagar remoto
+git remote -rm <nome_do_repo>
+
+# Desfazendo commits
+git reset --hard HEAD~1
+
